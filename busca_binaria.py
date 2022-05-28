@@ -10,28 +10,21 @@ encontrado = False
 
 numero = int(input("Digite un numero: "))
 
-while not(encontrado) and ponteiro <= tamanhovetor:
-	
+while not(encontrado) and ponteiro <= tamanhovetor:	
 	metade = int((ponteiro+tamanhovetor) / 2)
 	
-	if numero == vector[metade]:
-		
+	if numero == vector[metade]:		
 		encontrado = True
 	
-	elif numero < vector[metade]:
-		
+	elif numero < vector[metade]:		
 		tamanhovetor = metade - 1
 	
-	else:
-		
+	else:	
 		ponteiro = metade + 1
 
 if(encontrado):
-	
 	print("posição do valor ", str(metade+1))
-	
 	print(vector)
 
 else:
-	
 	print("valor não econtrado")
